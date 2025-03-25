@@ -1,0 +1,52 @@
+---
+import { Separator } from "~/components/ui/separator";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900">
+  <div class="mx-auto max-w-7xl py-10">
+    <div class="grid grid-cols-2 gap-6 md:gap-10">
+      <div class="col-span-1">
+        <h2 class="text-white mb-2 text-base md:text-xl">Minang IT Camp</h2>
+        <p class="text-gray-400 text-sm md:text-base w-2/3">
+          Memberdayakan Pemuda-Pemudi Minang untuk memajukan Nagari. Kembangkan
+          Skillmu di dunia IT dan raih kesempatan kerja di Perusahaan yang kamu
+          impikan.
+        </p>
+      </div>
+
+      <div class="col-span-1">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-1">
+            <h2 class="text-white mb-2 text-base md:text-xl">Community</h2>
+            <ul class="text-gray-400 text-sm md:text-base space-y-2">
+              <li><a href="/">About</a></li>
+              <li><a href="/">Contact</a></li>
+              <li><a href="/">Blog</a></li>
+              <li><a href="/">Event</a></li>
+            </ul>
+          </div>
+
+          <div class="col-span-1">
+            <h2 class="text-white mb-2 text-base md:text-xl">Legal</h2>
+            <ul class="text-gray-400 text-sm md:text-base space-y-2">
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Separator className="bg-gray-800" />
+
+  <div class="mx-auto max-w-7xl py-4">
+    <div class="flex items-center justify-center">
+      <p class="text-gray-400 text-sm md:text-base">
+        © 2017 - {currentYear} Minang IT Camp. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
