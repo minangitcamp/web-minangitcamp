@@ -1,0 +1,46 @@
+---
+import { BlurFade } from "~/components/magicui/blur-fade.tsx";
+
+const galleries = [
+  "/static/images/workshop-nodejs.jpeg",
+  "/static/images/pelatihan_odoo.jpg",
+  "/static/images/community-gathering-pandec.jpeg",
+  "/static/images/buka_bersama_mic.jpg",
+  "/static/images/belajar_odoo.jpeg",
+  "/static/images/mic_talks_1.jpeg",
+  "/static/images/mic_talks_2.jpeg",
+  "/static/images/mic_talks_3.jpeg",
+  "/static/images/mic_talks_4.jpg",
+  "/static/images/mic_talks_5.jpeg",
+  "/static/images/mic_talks_7.jpeg",
+  "/static/images/batch_6.jpeg",
+  "/static/images/batch_5.jpeg",
+  "/static/images/batch_4.jpg",
+  "/static/images/batch_3.jpg",
+  "/static/images/batch_2.jpg",
+  "/static/images/batch_1.jpg",
+];
+---
+
+<section id="photos" class="mx-auto max-w-7xl py-10 px-4 md:px-6">
+  <div class="flex flex-col items-center justify-center gap-4">
+    <h2 class="text-3xl font-bold text-gray-100">Galeri</h2>
+    <p class="text-gray-400">
+      Semua kegiatan Minang IT Camp dapat dilihat di galeri ini
+    </p>
+  </div>
+
+  <div class="columns-2 gap-4 sm:columns-3 my-10">
+    {
+      galleries.map((imageUrl, idx) => (
+        <BlurFade client:load delay={0.25 + idx * 0.05} inView>
+          <img
+            class="mb-4 size-full rounded-lg object-contain"
+            src={imageUrl}
+            alt={`Galeri Minang IT Camp ${idx + 1}`}
+          />
+        </BlurFade>
+      ))
+    }
+  </div>
+</section>
