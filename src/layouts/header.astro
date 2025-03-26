@@ -1,10 +1,11 @@
 ---
+import { Button } from "~/components/ui/button";
+
 const navbarLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
-  { href: "/event", label: "Event" },
+  { href: "/", label: "Beranda" },
+  { href: "/about", label: "Tentang" },
+  { href: "#", label: "Blog" },
+  { href: "#", label: "Acara" },
 ];
 ---
 
@@ -17,7 +18,7 @@ const navbarLinks = [
         <h2
           class="text-white font-bold text-xl md:text-2xl hover:text-red-500 transition-colors"
         >
-          Minang IT Camp
+          <a href="/">Minang IT Camp</a>
         </h2>
       </div>
 
@@ -26,13 +27,17 @@ const navbarLinks = [
           navbarLinks.map((link) => (
             <a
               href={link.href}
-              class="text-white text-md md:text-lg hover:text-red-500 transition-colors"
+              class="text-white text-base hover:text-red-500 transition-colors"
             >
               {link.label}
             </a>
           ))
         }
       </div>
+
+      <Button className="bg-gray-800 border border-gray-700"
+        >Hubungi Kami</Button
+      >
     </div>
   </div>
 </nav>
