@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 import Footer from "./footer.astro";
 import Header from "./header.astro";
 ---
@@ -18,7 +20,7 @@ import Header from "./header.astro";
       rel="stylesheet"
     />
   </head>
-  <body class="antialiased">
+  <body class="antialiased bg-gray-950/95">
     <Header />
     <slot />
     <Footer />
