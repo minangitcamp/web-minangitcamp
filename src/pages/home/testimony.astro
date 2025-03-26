@@ -1,0 +1,95 @@
+---
+import { Marquee } from "~/components/magicui/marquee";
+import { ReviewCard } from "./partials/review-card";
+
+const reviews = [
+  {
+    name: "Fajri",
+    username: "@fajri",
+    body: "Saya sangat terkesan dengan komunitas Minang IT Camp. Banyak ilmu dan pengalaman berharga yang saya dapatkan di sini.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Fajri",
+  },
+  {
+    name: "Maryadi",
+    username: "@maryadi",
+    body: "Minang IT Camp memberikan saya kesempatan untuk belajar dan berkembang dalam dunia teknologi. Mentornya sangat kompeten!",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Maryadi",
+  },
+  {
+    name: "Defrimen",
+    username: "@defrimen",
+    body: "Bergabung dengan Minang IT Camp adalah keputusan terbaik saya. Workshop dan pelatihannya sangat bermanfaat untuk karir IT saya.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Defrimen",
+  },
+  {
+    name: "Ikhsanul",
+    username: "@ikhsanul",
+    body: "Saya mendapatkan banyak koneksi dan pengetahuan baru di Minang IT Camp. Komunitasnya sangat supportif dan bersahabat.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Ikhsanul",
+  },
+  {
+    name: "Hilyatul",
+    username: "@hilyatul",
+    body: "Minang IT Camp membuka banyak peluang bagi saya di dunia IT. Fasilitas dan program-programnya sangat membantu perkembangan skill saya.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Hilyatul",
+  },
+  {
+    name: "Nico",
+    username: "@nico",
+    body: "Terima kasih Minang IT Camp telah memberikan wadah untuk belajar dan berkreasi. Saya jadi lebih percaya diri dalam menghadapi tantangan teknologi.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Nico",
+  },
+  {
+    name: "Bayu",
+    username: "@bayu",
+    body: "Minang IT Camp benar-benar mengubah pandangan saya tentang teknologi. Mentornya sabar dan materi pelatihannya sangat relevan dengan kebutuhan industri saat ini.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Bayu",
+  },
+  {
+    name: "Alvino",
+    username: "@alvino",
+    body: "Saya awalnya ragu bergabung, tapi setelah beberapa minggu di Minang IT Camp, skill programming saya meningkat drastis. Komunitas yang supportif dan penuh semangat!",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Jade",
+  },
+  {
+    name: "Egi",
+    username: "@egi",
+    body: "Bersyukur bisa menjadi bagian dari Minang IT Camp. Di sini saya tidak hanya belajar coding, tapi juga membangun networking yang berharga untuk karir masa depan.",
+    img: "https://api.dicebear.com/9.x/micah/svg?seed=Egi",
+  },
+];
+
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+---
+
+<section class="py-10">
+  <div class="mx-auto max-w-7xl px-4 md:px-6">
+    <div class="flex flex-col items-center justify-center gap-4">
+      <h2 class="text-3xl font-bold text-gray-100">Apa kata teman-teman?</h2>
+      <p class="text-gray-400">
+        Teman-teman bakalan mendapatkan benefit yang banyak ketika bergabung
+        bersama komunitas Minang IT Camp
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="relative flex w-full flex-col items-center justify-center overflow-hidden mt-10"
+  >
+    <Marquee client:load pauseOnHover className="[--duration:20s]">
+      {firstRow.map((review) => <ReviewCard client:load {...review} />)}
+    </Marquee>
+    <Marquee client:load reverse pauseOnHover className="[--duration:20s]">
+      {secondRow.map((review) => <ReviewCard client:load {...review} />)}
+    </Marquee>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-900/80 to-transparent"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-900/80 to-transparent"
+    >
+    </div>
+  </div>
+</section>

@@ -128,20 +128,40 @@
   --color-color-2: var(----color-2);
   --color-color-1: var(----color-1);
   --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 }
 
 @layer utilities {
   .animate-rainbow {
     @apply animate-rainbow;
   }
-}
 
-@keyframes rainbow {
-  0% {
-    background-position: 0%;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
   }
-  100% {
-    background-position: 200%;
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
   }
 }
 
