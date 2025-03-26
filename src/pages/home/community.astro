@@ -1,0 +1,58 @@
+---
+const communities = [
+  {
+    name: "Golang Indonesia",
+    url: "https://t.me/golangID",
+    image: "/static/images/logo-golang-indo.jpeg",
+  },
+  {
+    name: "Flutter Indonesia",
+    url: "https://t.me/flutter_id",
+    image: "/static/images/logo-flutter-indo.jpeg",
+  },
+  {
+    name: "Laravel Indonesia",
+    url: "https://t.me/laravelindonesia",
+    image: "/static/images/logo-laravel-indo.jpeg",
+  },
+  {
+    name: "ReactJS Indonesia",
+    url: "https://t.me/react_idn",
+    image: "/static/images/logo-reactjs-indo.jpeg",
+  },
+  {
+    name: "NodeJS Indonesia",
+    url: "https://t.me/nodejsid",
+    image: "/static/images/logo-nodejs-indo.jpeg",
+  },
+  {
+    name: "Minang JS",
+    url: "https://t.me/javascriptpadang",
+    image: "/static/images/logo-minang-js.png",
+  },
+];
+---
+
+<section class="mx-auto max-w-7xl py-10 px-4 md:px-6">
+  <div class="flex flex-col items-center justify-center gap-4">
+    <h2 class="text-3xl font-bold text-gray-100">Komunitas</h2>
+    <p class="text-gray-400">
+      Bergabunglah dengan komunitas lainnya, agar kamu mendapatkan wawasan dan
+      ilmu tambahan
+    </p>
+  </div>
+
+  <div class="flex flex-row items-center justify-center gap-4 mt-10">
+    {
+      communities.map((community) => (
+        <a href={community.url} target="_blank" rel="noopener noreferrer">
+          <img
+            src={community.image}
+            alt={community.name}
+            class="size-[7rem] rounded-2xl"
+          />
+        </a>
+      ))
+    }
+  </div>
+</section>
