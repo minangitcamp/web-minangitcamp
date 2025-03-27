@@ -16,7 +16,7 @@ export const ReviewCard = ({
       className={cn(
         "relative h-full w-80 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
-        "border-gray-300 bg-gray-300  hover:bg-gray-300 "
+        "border-gray-700 bg-transparent hover:bg-gray-800 text-gray-100"
       )}
     >
       <div className="flex flex-row items-center gap-2">
