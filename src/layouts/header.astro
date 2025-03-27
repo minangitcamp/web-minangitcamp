@@ -1,5 +1,6 @@
 ---
 import { Button } from "~/components/ui/button";
+import MobileNav from "./partials/mobile-nav";
 
 const navbarLinks = [
   { href: "/", label: "Beranda" },
@@ -22,7 +23,7 @@ const navbarLinks = [
         </h2>
       </div>
 
-      <div class="flex items-center gap-4 md:gap-6">
+      <div class="hidden md:flex items-center gap-4 md:gap-6">
         {
           navbarLinks.map((link) => (
             <a
@@ -35,9 +36,13 @@ const navbarLinks = [
         }
       </div>
 
-      <Button className="bg-gray-800 border border-gray-700"
-        >Hubungi Kami</Button
-      >
+      <div class="hidden md:block">
+        <Button className="bg-gray-800 border border-gray-700">
+          Hubungi Kami
+        </Button>
+      </div>
+
+      <MobileNav client:load menus={navbarLinks} />
     </div>
   </div>
 </nav>
