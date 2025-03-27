@@ -133,10 +133,6 @@
 }
 
 @layer utilities {
-  .animate-rainbow {
-    @apply animate-rainbow;
-  }
-
   @keyframes marquee {
     from {
       transform: translateX(0);

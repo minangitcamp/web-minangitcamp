@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 import Footer from "./footer.astro";
-import Header from "./header.astro";
+import Navbar from "./navbar";
 ---
 
 <!doctype html>
@@ -21,7 +21,7 @@ import Header from "./header.astro";
     />
   </head>
   <body class="antialiased bg-gray-950/95">
-    <Header />
+    <Navbar client:load />
     <slot />
     <Footer />
   </body>

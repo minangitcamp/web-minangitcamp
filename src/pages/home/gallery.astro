@@ -30,7 +30,7 @@ const galleries = [
     </p>
   </div>
 
-  <div class="columns-2 gap-4 sm:columns-3 my-10">
+  <div class="columns-1 sm:columns-2 gap-4 lg:columns-3 my-10">
     {
       galleries.map((imageUrl, idx) => (
         <BlurFade client:load delay={0.25 + idx * 0.05} inView>
