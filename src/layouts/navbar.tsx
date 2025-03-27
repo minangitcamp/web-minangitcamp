@@ -29,8 +29,9 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4 md:gap-6">
-            {navbarLinks.map((link) => (
+            {navbarLinks.map((link, index) => (
               <a
+                key={index}
                 href={link.href}
                 className="text-white text-base hover:text-red-500 transition-colors"
               >
