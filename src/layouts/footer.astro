@@ -1,5 +1,6 @@
 ---
 import { Separator } from "~/components/ui/separator";
+import FooterSocial from "./partials/social";
 
 const currentYear = new Date().getFullYear();
 
@@ -13,12 +14,6 @@ const communityLinks = [
 const legalLinks = [
   { href: "/", label: "Privacy Policy" },
   { href: "/", label: "Terms of Service" },
-];
-
-const socialLinks = [
-  { href: "https://www.youtube.com/@minangitcamp", label: "Youtube", svg: "/static/svg/youtube.svg" },
-  { href: "https://www.facebook.com/minangitcamp", label: "Facebook", svg: "/static/svg/facebook.svg" },
-  { href: "https://github.com/minangitcamp", label: "Github", svg: "/static/svg/github.svg" },
 ];
 ---
 
@@ -81,22 +76,7 @@ const socialLinks = [
 
           <div class="col-span-full md:col-span-1">
             <h2 class="text-white mb-2 text-base md:text-xl">Social Media</h2>
-            <ul class="text-gray-400 text-sm md:text-base flex flex-row gap-4">
-              {
-                socialLinks.map((link) => (
-                  <li>
-                    <a
-                      href={link.href}
-                      class="hover:text-red-500 text-gray-400 transition-colors duration-300"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={link.svg} alt={link.label} class="w-6 h-6" />
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
+            <FooterSocial />
           </div>
         </div>
       </div>
