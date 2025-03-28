@@ -32,8 +32,8 @@ const socialLinks = [
 export default function FooterSocial() {
   return (
     <ul className="text-gray-400 text-sm md:text-base flex flex-row gap-4">
-      {socialLinks.map((link) => (
-        <li>
+      {socialLinks.map((link, index) => (
+        <li key={index}>
           <a
             href={link.href}
             className="hover:text-red-500 text-gray-400 transition-colors duration-300"
