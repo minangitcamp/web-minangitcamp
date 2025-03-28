@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    ".next/": true,
+    ".idea/": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "ios": true,
+    "android": true,
+    "vendor": true
+  }
+}

@@ -195,7 +195,7 @@ function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
             >
-              <Button className="bg-gray-800 border border-gray-700 w-full">
+              <Button className="bg-gray-800 border border-gray-700 w-full h-12 lg:text-sm text-base lg:h-9">
                 Hubungi Kami
               </Button>
             </motion.li>
