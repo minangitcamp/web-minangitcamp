@@ -2,13 +2,10 @@
   "files.exclude": {
     "node_modules/": true,
     ".next/": true,
-    ".astro/": true,
     ".idea/": true
   },
   "search.exclude": {
     "**/node_modules": true,
-    ".astro": true,
-    ".next": true,
     "ios": true,
     "android": true,
     "vendor": true
