@@ -1,9 +1,4 @@
-import {
-  IconBrandFacebook,
-  IconBrandGithub,
-  IconBrandYoutube,
-  IconBrandYoutubeFilled,
-} from "@tabler/icons-react";
+import { IconBrandFacebook, IconBrandGithub, IconBrandYoutubeFilled } from "@tabler/icons-react"
 
 const socialLinks = [
   {
@@ -27,7 +22,7 @@ const socialLinks = [
       <IconBrandGithub className="w-6 h-6 text-white hover:text-red-500 transition-colors duration-300" />
     ),
   },
-];
+]
 
 export default function FooterSocial() {
   return (
@@ -45,5 +40,5 @@ export default function FooterSocial() {
         </li>
       ))}
     </ul>
-  );
+  )
 }
