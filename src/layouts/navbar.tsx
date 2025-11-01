@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
-import { Button } from "~/components/ui/button";
-import { useBreakPoint } from "~/hooks/useBreakpoint";
-import { cn } from "~/lib/utils";
+import { AnimatePresence, motion } from "motion/react"
+import { useState } from "react"
+import { Button } from "~/components/ui/button"
+import { useBreakPoint } from "~/hooks/useBreakpoint"
+import { cn } from "~/lib/utils"
 
-type NavLinks = { label: string; href: string };
+type NavLinks = { label: string; href: string }
 
 const navbarLinks: NavLinks[] = [
   { href: "/", label: "Beranda" },
   { href: "#", label: "Tentang" },
   { href: "#", label: "Blog" },
   { href: "#", label: "Acara" },
-];
+]
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <nav className="bg-gray-900/80 backdrop-blur-md fixed w-full z-50 transition-all duration-300 border-b border-gray-700">
@@ -41,9 +41,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <Button className="bg-gray-800 border border-gray-700">
-              Hubungi Kami
-            </Button>
+            <Button className="bg-gray-800 border border-gray-700">Hubungi Kami</Button>
           </div>
 
           <div className="flex items-center lg:hidden">
@@ -91,17 +89,17 @@ export default function Navbar() {
 
       <MobileNavbar open={open} onOpenChange={setOpen} />
     </nav>
-  );
+  )
 }
 
 type MobileNavbarProps = {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-};
+  open: boolean
+  onOpenChange: (open: boolean) => void
+}
 
 function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
-  const { breakpoint } = useBreakPoint();
-  const isMobile = ["md", "sm", "xs"].includes(breakpoint as string);
+  const { breakpoint } = useBreakPoint()
+  const isMobile = ["md", "sm", "xs"].includes(breakpoint as string)
 
   return (
     <AnimatePresence mode="wait">
@@ -146,7 +144,7 @@ function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
                   >
                     <div
                       onClick={() => {
-                        onOpenChange(!open);
+                        onOpenChange(!open)
                       }}
                       className={cn(
                         "flex h-full w-full cursor-pointer items-center px-3 py-2 text-base font-medium",
@@ -156,7 +154,7 @@ function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
                       {item.label}
                     </div>
                   </motion.li>
-                );
+                )
               }
 
               return (
@@ -182,7 +180,7 @@ function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
                     {item.label}
                   </a>
                 </motion.li>
-              );
+              )
             })}
 
             <motion.li
@@ -203,5 +201,5 @@ function MobileNavbar({ open, onOpenChange }: MobileNavbarProps) {
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  )
 }

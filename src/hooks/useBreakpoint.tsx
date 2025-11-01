@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import useBreakpointBase from "use-breakpoint";
+import useBreakpointBase from "use-breakpoint"
 
 const BREAKPOINTS = {
   xs: 0,
@@ -8,8 +8,8 @@ const BREAKPOINTS = {
   md: 768,
   lg: 992,
   xl: 1200,
-};
+}
 
 export function useBreakPoint() {
-  return useBreakpointBase(BREAKPOINTS);
+  return useBreakpointBase(BREAKPOINTS)
 }
