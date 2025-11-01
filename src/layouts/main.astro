@@ -1,8 +1,8 @@
 ---
-import "../styles/global.css";
+import "../styles/global.css"
 
-import Footer from "./footer.astro";
-import Navbar from "./navbar";
+import Footer from "./footer.astro"
+import Navbar from "./navbar"
 ---
 
 <!doctype html>
@@ -19,6 +19,13 @@ import Navbar from "./navbar";
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+
+    {/* Analytics with Umami */}
+    <script
+      defer
+      is:inline
+      src="https://analytics.masb0ymas.com/script.js"
+      data-website-id="ae1df98c-36fe-48cc-9a4e-765d647f1ba7"></script>
   </head>
   <body class="antialiased bg-gray-950/95">
     <Navbar client:load />
